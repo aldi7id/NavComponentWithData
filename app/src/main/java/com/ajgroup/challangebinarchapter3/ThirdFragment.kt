@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import com.ajgroup.challangebinarchapter3.databinding.FragmentThirdBinding
 
 class ThirdFragment : Fragment() {
@@ -26,6 +27,12 @@ class ThirdFragment : Fragment() {
         val aName = ThirdFragmentArgs.fromBundle(arguments as Bundle).name
 
         binding.tvName.text ="Nama Anda: $aName"
+
+        binding.btnFourFragment.setOnClickListener {
+            val mBundle = Bundle()
+            mBundle.putString(aName, "$aName")
+            it.findNavController().navigate(R.id.action_thirdFragment_to_fourthFragment, mBundle)
+        }
     }
 
     override fun onDestroy() {
