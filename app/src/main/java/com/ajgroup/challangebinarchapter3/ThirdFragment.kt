@@ -12,7 +12,9 @@ class ThirdFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var _binding : FragmentThirdBinding? = null
     private val binding get() = _binding!!
-
+    companion object {
+        val EXTRA_NAME = "EXTRA NAME"
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +32,7 @@ class ThirdFragment : Fragment() {
 
         binding.btnFourFragment.setOnClickListener {
             val mBundle = Bundle()
-            mBundle.putString(aName, "$aName")
+            mBundle.putString(EXTRA_NAME, "$aName")
             it.findNavController().navigate(R.id.action_thirdFragment_to_fourthFragment, mBundle)
         }
     }

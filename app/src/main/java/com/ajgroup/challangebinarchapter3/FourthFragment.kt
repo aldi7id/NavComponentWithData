@@ -27,7 +27,7 @@ class FourthFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val aName = arguments?.getString(FirstFragment.EXTRA_NAME)
-        binding.tvName.text = "Nama Kamu: $aName"
+        binding.tvName.text = "Nama Anda: $aName"
 
         binding.btnThirdFragment.setOnClickListener {
             if (binding.etAge.text.isNullOrEmpty()){
