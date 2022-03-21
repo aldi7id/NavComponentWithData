@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.findNavController
 import com.ajgroup.challangebinarchapter3.databinding.FragmentSecondBinding
 
 
@@ -27,6 +29,16 @@ class SecondFragment : Fragment() {
         val aName = arguments?.getString(FirstFragment.EXTRA_NAME)
 
         binding.tvName.text = "Nama Kamu: $aName"
+
+        binding.btnThirdFragment.setOnClickListener {
+            if (binding.etName.text.isNullOrEmpty()){
+                Toast.makeText(requireContext(), "Kolom masih kosong", Toast.LENGTH_SHORT).show()
+            } else {
+                val actiontoThirdFragment =
+                    SecondFragmentDirections.actionSecondFragmentToThirdFragment(binding.etName.text.toString())
+                it.findNavController().navigate(actiontoThirdFragment)
+            }
+        }
     }
 
     override fun onDestroy() {
