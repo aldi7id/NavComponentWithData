@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import com.ajgroup.challangebinarchapter3.databinding.FragmentFirstBinding
 
 
@@ -25,11 +26,12 @@ class FirstFragment : Fragment() {
 
         return binding.root
     }
-    override fun onCreateView(view: View, savedInstanceState: Bundle?) {
-        super.onCreateView(view, savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.btnSecondFragment.setOnClickListener {
             val mBundle = Bundle()
             mBundle.putString(EXTRA_NAME, "Binarian Pertama")
+            it.findNavController().navigate(R.id.action_firstFragment_to_secondFragment, mBundle)
         }
     }
 
