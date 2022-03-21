@@ -15,7 +15,7 @@ class FirstFragment : Fragment() {
     private val binding get() = _binding!!
 
     companion object {
-        private val EXTRA_NAME = "EXTRA NAME"
+        val EXTRA_NAME = "EXTRA NAME"
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
