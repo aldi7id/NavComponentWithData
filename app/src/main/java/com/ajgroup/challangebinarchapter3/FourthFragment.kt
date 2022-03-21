@@ -26,6 +26,9 @@ class FourthFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val aName = arguments?.getString(FirstFragment.EXTRA_NAME)
+        binding.tvName.text = "Nama Kamu: $aName"
+
         binding.btnThirdFragment.setOnClickListener {
             if (binding.etAge.text.isNullOrEmpty()){
                 Toast.makeText(requireContext(), "Umur harus diisi", Toast.LENGTH_SHORT).show()

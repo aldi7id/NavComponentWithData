@@ -6,7 +6,11 @@
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".FourthFragment">
-
+<TextView
+    android:id="@+id/tv_name"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/your_name"/>
  <EditText
      android:id="@+id/et_age"
      android:layout_width="match_parent"
