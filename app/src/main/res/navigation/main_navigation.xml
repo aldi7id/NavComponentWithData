@@ -36,6 +36,12 @@
             app:argType="string"
             app:nullable="true"
             android:defaultValue="Namanya kosong" />
+        <argument
+            android:name="age"
+            android:defaultValue="Umurnya kosong" />
+        <argument
+            android:name="address"
+            android:defaultValue="Alamatnya kosong" />
     </fragment>
     <fragment
         android:id="@+id/fourthFragment"

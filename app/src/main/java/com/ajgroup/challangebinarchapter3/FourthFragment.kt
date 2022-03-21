@@ -16,6 +16,9 @@ class FourthFragment : Fragment() {
     private val binding get() = _binding!!
     companion object {
         val EXTRA_NAME = "EXTRA NAME"
+        const val ADDRESS = "ADDRESS"
+        const val AGE = "AGE"
+
     }
 
     override fun onCreateView(
@@ -31,15 +34,16 @@ class FourthFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val aName = arguments?.getString(FirstFragment.EXTRA_NAME)
         binding.tvName.text = "Nama Anda: $aName"
-
         binding.btnThirdFragment.setOnClickListener {
             if (binding.etAge.text.isNullOrEmpty()){
                 Toast.makeText(requireContext(), "Umur harus diisi", Toast.LENGTH_SHORT).show()
             } else {
-                val mBundle = Bundle()
-                mBundle.putString(EXTRA_NAME, "$aName")
                 val actiontoThirdFragment =
-                    FourthFragmentDirections.actionFourthFragmentToThirdFragment(binding.etAge.text.toString())
+                    FourthFragmentDirections.actionFourthFragmentToThirdFragment(
+                        binding.tvName.text.toString(),
+                        binding.etAge.text.toString(),
+                        binding.etAddress.text.toString())
+                        //binding.etJob.text.toString())
                 it.findNavController().navigate(actiontoThirdFragment)
             }
         }

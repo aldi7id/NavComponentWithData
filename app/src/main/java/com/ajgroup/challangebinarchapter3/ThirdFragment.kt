@@ -27,15 +27,19 @@ class ThirdFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val aName = ThirdFragmentArgs.fromBundle(arguments as Bundle).name
-
-        binding.tvName.text ="Nama Anda: $aName"
+        val bName = ThirdFragmentArgs.fromBundle(arguments as Bundle).name
+        val address = ThirdFragmentArgs.fromBundle(arguments as Bundle).address
+        val age = ThirdFragmentArgs.fromBundle(arguments as Bundle).age
 
         binding.btnFourFragment.setOnClickListener {
             val mBundle = Bundle()
             mBundle.putString(EXTRA_NAME, "$aName")
             it.findNavController().navigate(R.id.action_thirdFragment_to_fourthFragment, mBundle)
         }
-    }
+        binding.tvName.text = "Nama Anda : $aName"
+        binding.tvAge.text = "Usia Anda : $age"
+        binding.tvAddress.text = "Alamat Anda : $address"
+        }
 
     override fun onDestroy() {
         super.onDestroy()
