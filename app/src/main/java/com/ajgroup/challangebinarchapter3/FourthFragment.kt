@@ -14,12 +14,12 @@ class FourthFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var _binding: FragmentFourthBinding? = null
     private val binding get() = _binding!!
-    companion object {
-        val EXTRA_NAME = "EXTRA NAME"
-        const val ADDRESS = "ADDRESS"
-        const val AGE = "AGE"
-
-    }
+//    companion object {
+//        val EXTRA_NAME = "EXTRA NAME"
+//        const val ADDRESS = "ADDRESS"
+//        const val AGE = "AGE"
+//
+//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -42,8 +42,8 @@ class FourthFragment : Fragment() {
                     FourthFragmentDirections.actionFourthFragmentToThirdFragment(
                         binding.tvName.text.toString(),
                         binding.etAge.text.toString(),
-                        binding.etAddress.text.toString())
-                        //binding.etJob.text.toString())
+                        binding.etAddress.text.toString(),
+                        binding.etJob.text.toString())
                 it.findNavController().navigate(actiontoThirdFragment)
             }
         }

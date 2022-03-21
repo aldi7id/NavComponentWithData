@@ -27,9 +27,9 @@ class ThirdFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val aName = ThirdFragmentArgs.fromBundle(arguments as Bundle).name
-        val bName = ThirdFragmentArgs.fromBundle(arguments as Bundle).name
         val address = ThirdFragmentArgs.fromBundle(arguments as Bundle).address
         val age = ThirdFragmentArgs.fromBundle(arguments as Bundle).age
+        val job = ThirdFragmentArgs.fromBundle(arguments as Bundle).job
 
         binding.btnFourFragment.setOnClickListener {
             val mBundle = Bundle()
@@ -39,6 +39,7 @@ class ThirdFragment : Fragment() {
         binding.tvName.text = "Nama Anda : $aName"
         binding.tvAge.text = "Usia Anda : $age"
         binding.tvAddress.text = "Alamat Anda : $address"
+        binding.tvJob.text = "Pekerjaan Anda: $job"
         }
 
     override fun onDestroy() {

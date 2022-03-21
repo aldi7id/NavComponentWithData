@@ -42,6 +42,11 @@
         <argument
             android:name="address"
             android:defaultValue="Alamatnya kosong" />
+        <argument
+            android:name="job"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="Jobnya kosong" />
     </fragment>
     <fragment
         android:id="@+id/fourthFragment"
