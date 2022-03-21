@@ -32,4 +32,9 @@ class FirstFragment : Fragment() {
             mBundle.putString(EXTRA_NAME, "Binarian Pertama")
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }
