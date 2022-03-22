@@ -41,7 +41,12 @@
     android:hint="@string/enter_tax_percent"
     android:drawableRight="@drawable/ic_percent"
     />
-
+<TextView
+    android:id="@+id/tv_total"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text=" "
+    />
     <Button
         android:id="@+id/btn_third_fragment"
         android:layout_width="match_parent"

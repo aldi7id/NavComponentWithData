@@ -14,12 +14,6 @@ class FourthFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var _binding: FragmentFourthBinding? = null
     private val binding get() = _binding!!
-//    companion object {
-//        val EXTRA_NAME = "EXTRA NAME"
-//        const val ADDRESS = "ADDRESS"
-//        const val AGE = "AGE"
-//
-//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,12 +32,17 @@ class FourthFragment : Fragment() {
             if (binding.etPrice.text.isNullOrEmpty()){
                 Toast.makeText(requireContext(), "Harganya Berapa?", Toast.LENGTH_SHORT).show()
             } else {
+                val price = binding.etPrice.text.toString().toInt()
+                val qty = binding.etQty.text.toString().toInt()
+                val tax = binding.etTax.text.toString().toInt()
+                binding.tvTotal.text = (price*qty*(1+tax/100)).toString()
                 val actiontoThirdFragment =
                     FourthFragmentDirections.actionFourthFragmentToThirdFragment(
                         binding.tvName.text.toString(),
                         binding.etPrice.text.toString(),
                         binding.etQty.text.toString(),
-                        binding.etTax.text.toString())
+                        binding.etTax.text.toString(),
+                        binding.tvTotal.text.toString())
                 it.findNavController().navigate(actiontoThirdFragment)
             }
         }
