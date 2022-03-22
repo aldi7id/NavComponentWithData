@@ -28,11 +28,11 @@ class SecondFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val aName = arguments?.getString(FirstFragment.EXTRA_NAME)
 
-        binding.tvName.text = "Nama Kamu: $aName"
+        binding.tvName.text = "$aName"
 
         binding.btnThirdFragment.setOnClickListener {
             if (binding.etName.text.isNullOrEmpty()){
-                Toast.makeText(requireContext(), "Kolom masih kosong", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Kolom nama masih kosong", Toast.LENGTH_SHORT).show()
             } else {
                 val actiontoThirdFragment =
                     SecondFragmentDirections.actionSecondFragmentToThirdFragment(binding.etName.text.toString())

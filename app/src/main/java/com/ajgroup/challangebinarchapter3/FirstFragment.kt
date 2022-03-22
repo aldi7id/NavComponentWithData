@@ -30,7 +30,7 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.btnSecondFragment.setOnClickListener {
             val mBundle = Bundle()
-            mBundle.putString(EXTRA_NAME, "Binarian Pertama")
+            mBundle.putString(EXTRA_NAME, "Silahkan Masukkan Nama Terlebih Dahulu")
             it.findNavController().navigate(R.id.action_firstFragment_to_secondFragment, mBundle)
         }
     }
