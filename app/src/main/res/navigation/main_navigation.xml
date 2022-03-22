@@ -35,18 +35,18 @@
             android:name="name"
             app:argType="string"
             app:nullable="true"
-            android:defaultValue="Namanya kosong" />
+            android:defaultValue=" " />
         <argument
             android:name="age"
-            android:defaultValue="Umurnya kosong" />
+            android:defaultValue=" " />
         <argument
             android:name="address"
-            android:defaultValue="Alamatnya kosong" />
+            android:defaultValue=" " />
         <argument
             android:name="job"
             app:argType="string"
             app:nullable="true"
-            android:defaultValue="Jobnya kosong" />
+            android:defaultValue=" " />
     </fragment>
     <fragment
         android:id="@+id/fourthFragment"

@@ -37,6 +37,7 @@ class SecondFragment : Fragment() {
                 val actiontoThirdFragment =
                     SecondFragmentDirections.actionSecondFragmentToThirdFragment(binding.etName.text.toString())
                 it.findNavController().navigate(actiontoThirdFragment)
+
             }
         }
     }

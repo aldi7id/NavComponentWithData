@@ -28,6 +28,7 @@
     android:layout_height="wrap_content"
     android:hint="@string/enter_your_job"
     />
+
     <Button
         android:id="@+id/btn_third_fragment"
         android:layout_width="match_parent"

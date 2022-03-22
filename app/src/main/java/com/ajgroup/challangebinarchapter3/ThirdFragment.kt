@@ -37,9 +37,9 @@ class ThirdFragment : Fragment() {
             it.findNavController().navigate(R.id.action_thirdFragment_to_fourthFragment, mBundle)
         }
         binding.tvName.text = "Nama Anda : $aName"
-        binding.tvAge.text = "Usia Anda : $age"
-        binding.tvAddress.text = "Alamat Anda : $address"
-        binding.tvJob.text = "Pekerjaan Anda: $job"
+        binding.tvAge.text = "$age"
+        binding.tvAddress.text = "$address"
+        binding.tvJob.text = "$job"
         }
 
     override fun onDestroy() {
