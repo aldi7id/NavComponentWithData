@@ -28,13 +28,19 @@
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:hint="@string/enter_your_price"
+     android:inputType="number"
+     android:autofillHints="none"
      />
     <EditText
+        android:inputType="number"
+        android:autofillHints="none"
         android:id="@+id/et_qty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/enter_your_qty"/>
 <EditText
+    android:inputType="number"
+    android:autofillHints="none"
     android:id="@+id/et_tax"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
