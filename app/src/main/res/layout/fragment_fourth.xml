@@ -24,18 +24,18 @@
     android:layout_height="wrap_content"
     android:text="@string/your_name"/>
  <EditText
-     android:id="@+id/et_age"
+     android:id="@+id/et_price"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:hint="@string/enter_your_price"
      />
     <EditText
-        android:id="@+id/et_address"
+        android:id="@+id/et_qty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/enter_your_qty"/>
 <EditText
-    android:id="@+id/et_job"
+    android:id="@+id/et_tax"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:hint="@string/enter_tax_percent"

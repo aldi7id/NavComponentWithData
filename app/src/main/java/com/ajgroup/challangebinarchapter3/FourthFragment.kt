@@ -35,15 +35,15 @@ class FourthFragment : Fragment() {
         val aName = arguments?.getString(FirstFragment.EXTRA_NAME)
         binding.tvName.text = "$aName"
         binding.btnThirdFragment.setOnClickListener {
-            if (binding.etAge.text.isNullOrEmpty()){
-                Toast.makeText(requireContext(), "Umur harus diisi", Toast.LENGTH_SHORT).show()
+            if (binding.etPrice.text.isNullOrEmpty()){
+                Toast.makeText(requireContext(), "Harganya Berapa?", Toast.LENGTH_SHORT).show()
             } else {
                 val actiontoThirdFragment =
                     FourthFragmentDirections.actionFourthFragmentToThirdFragment(
                         binding.tvName.text.toString(),
-                        binding.etAge.text.toString(),
-                        binding.etAddress.text.toString(),
-                        binding.etJob.text.toString())
+                        binding.etPrice.text.toString(),
+                        binding.etQty.text.toString(),
+                        binding.etTax.text.toString())
                 it.findNavController().navigate(actiontoThirdFragment)
             }
         }
