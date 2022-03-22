@@ -6,6 +6,18 @@
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".FourthFragment">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:text="@string/tv_title_pajak"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 <TextView
     android:id="@+id/tv_name"
     android:layout_width="match_parent"
@@ -34,4 +46,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/back_to_screen_three"/>
+</LinearLayout>
 </LinearLayout>

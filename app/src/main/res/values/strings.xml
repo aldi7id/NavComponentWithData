@@ -13,4 +13,5 @@
     <string name="back_to_screen_three">Back To Screen THREE</string>
     <string name="nama_kamu">Nama Kamu</string>
     <string name="your_name">Your Name</string>
+    <string name="tv_title_pajak"><b>Perhitungan Total Belanjaan Setelah Kena Pajak</b></string>
 </resources>

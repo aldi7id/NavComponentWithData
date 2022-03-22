@@ -36,7 +36,7 @@ class ThirdFragment : Fragment() {
             mBundle.putString(EXTRA_NAME, "$aName")
             it.findNavController().navigate(R.id.action_thirdFragment_to_fourthFragment, mBundle)
         }
-        binding.tvName.text = "Nama Anda : $aName"
+        binding.tvName.text = "Selamat Datang $aName"
         binding.tvAge.text = "$age"
         binding.tvAddress.text = "$address"
         binding.tvJob.text = "$job"
