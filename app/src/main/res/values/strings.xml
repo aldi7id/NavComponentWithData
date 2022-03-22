@@ -14,4 +14,7 @@
     <string name="nama_kamu">Nama Kamu</string>
     <string name="your_name">Your Name</string>
     <string name="tv_title_pajak"><b>Perhitungan Total Belanjaan Setelah Kena Pajak</b></string>
+    <string name="enter_tax_percent">Enter Tax (Percent)</string>
+    <string name="enter_your_qty">Enter Your QTY</string>
+    <string name="enter_your_price">Enter Your Price</string>
 </resources>

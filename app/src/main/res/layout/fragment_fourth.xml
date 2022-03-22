@@ -27,18 +27,19 @@
      android:id="@+id/et_age"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
-     android:hint="@string/enter_your_age"
+     android:hint="@string/enter_your_price"
      />
     <EditText
         android:id="@+id/et_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/enter_your_address"/>
+        android:hint="@string/enter_your_qty"/>
 <EditText
     android:id="@+id/et_job"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:hint="@string/enter_your_job"
+    android:hint="@string/enter_tax_percent"
+    android:drawableRight="@drawable/ic_percent"
     />
 
     <Button
