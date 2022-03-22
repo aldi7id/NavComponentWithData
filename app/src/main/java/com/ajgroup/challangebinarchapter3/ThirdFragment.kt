@@ -27,9 +27,10 @@ class ThirdFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val aName = ThirdFragmentArgs.fromBundle(arguments as Bundle).name
-        val address = ThirdFragmentArgs.fromBundle(arguments as Bundle).address
-        val age = ThirdFragmentArgs.fromBundle(arguments as Bundle).age
-        val job = ThirdFragmentArgs.fromBundle(arguments as Bundle).job
+        val price = ThirdFragmentArgs.fromBundle(arguments as Bundle).price
+        val qty = ThirdFragmentArgs.fromBundle(arguments as Bundle).qty
+        val tax = ThirdFragmentArgs.fromBundle(arguments as Bundle).tax
+        val total = ThirdFragmentArgs.fromBundle(arguments as Bundle).total
 
         binding.btnFourFragment.setOnClickListener {
             val mBundle = Bundle()
@@ -37,9 +38,10 @@ class ThirdFragment : Fragment() {
             it.findNavController().navigate(R.id.action_thirdFragment_to_fourthFragment, mBundle)
         }
         binding.tvName.text = "Selamat Datang $aName"
-        binding.tvAge.text = "$age"
-        binding.tvAddress.text = "$address"
-        binding.tvJob.text = "$job"
+        binding.tvPrice.text = "$price"
+        binding.tvQty.text = "$qty"
+        binding.tvTax.text = "$tax"
+        binding.tvTotal.text = "$total"
         }
 
     override fun onDestroy() {

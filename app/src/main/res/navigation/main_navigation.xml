@@ -37,15 +37,16 @@
             app:nullable="true"
             android:defaultValue=" " />
         <argument
-            android:name="age"
+            android:name="price"
             android:defaultValue=" " />
         <argument
-            android:name="address"
+            android:name="qty"
             android:defaultValue=" " />
         <argument
-            android:name="job"
-            app:argType="string"
-            app:nullable="true"
+            android:name="tax"
+            android:defaultValue=" " />
+        <argument
+            android:name="total"
             android:defaultValue=" " />
     </fragment>
     <fragment

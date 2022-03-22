@@ -13,20 +13,25 @@
         android:layout_height="wrap_content"
         android:text="@string/your_name" />
     <TextView
-        android:id="@+id/tv_age"
+        android:id="@+id/tv_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" " />
     <TextView
-        android:id="@+id/tv_address"
+        android:id="@+id/tv_qty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" " />
     <TextView
-        android:id="@+id/tv_job"
+        android:id="@+id/tv_tax"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" " />
+    <TextView
+        android:id="@+id/tv_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" "/>
     <Button
         android:id="@+id/btn_four_fragment"
         android:layout_width="match_parent"
