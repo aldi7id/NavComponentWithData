@@ -37,12 +37,22 @@ class ThirdFragment : Fragment() {
             mBundle.putString(EXTRA_NAME, "$aName")
             it.findNavController().navigate(R.id.action_thirdFragment_to_fourthFragment, mBundle)
         }
-        binding.tvName.text = "Selamat Datang $aName"
-        binding.tvPrice.text = "Harga Barang: Rp. $price"
-        binding.tvQty.text = "Jumlah Barang: $qty"
-        binding.tvTax.text = "Pajak: $tax %"
-        binding.tvTotal.text = "Rp. $total"
+
+        if (price != "Rp. ") {
+        binding.tvName.text = "Halo $aName Ini Total Semua Belanjaan Kamu:"
+        binding.tvPrice.text = "Rp. $price"
+        binding.tvQty.text = "Jumlah Belanjaan: $qty"
+        binding.tvTax.text = "Pajak: $tax"
+        binding.tvTotal.text = "Total Belanjaan: $total"
+        binding.btnFourFragment.visibility = View.GONE
+        } else {
+            binding.tvName.text = "Selamat Datang $aName"
+            binding.tvPrice.visibility = View.GONE
+            binding.tvQty.visibility = View.GONE
+            binding.tvTax.visibility = View.GONE
+            binding.tvTotal.visibility = View.GONE
         }
+    }
 
     override fun onDestroy() {
         super.onDestroy()

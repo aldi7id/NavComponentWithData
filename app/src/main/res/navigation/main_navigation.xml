@@ -38,7 +38,7 @@
             android:defaultValue=" " />
         <argument
             android:name="price"
-            android:defaultValue=" " />
+            android:defaultValue="Rp. " />
         <argument
             android:name="qty"
             android:defaultValue=" " />
