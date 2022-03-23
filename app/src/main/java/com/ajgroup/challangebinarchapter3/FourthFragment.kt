@@ -29,8 +29,8 @@ class FourthFragment : Fragment() {
         val aName = arguments?.getString(FirstFragment.EXTRA_NAME)
         binding.tvName.text = "$aName"
         binding.btnThirdFragment.setOnClickListener {
-            if (binding.etPrice.text.isNullOrEmpty()){
-                Toast.makeText(requireContext(), "Harganya Berapa?", Toast.LENGTH_SHORT).show()
+            if (binding.etPrice.text.isNullOrEmpty() || binding.etQty.text.isNullOrEmpty() || binding.etTax.text.isNullOrEmpty()){
+                Toast.makeText(requireContext(), "Ada Kolom Yang Kosong", Toast.LENGTH_SHORT).show()
             } else {
                 val price = binding.etPrice.text.toString().toInt()
                 val qty = binding.etQty.text.toString().toInt()

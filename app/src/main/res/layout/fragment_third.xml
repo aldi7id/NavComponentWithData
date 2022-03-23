@@ -19,26 +19,31 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <TextView
+        android:textSize="20sp"
         android:id="@+id/tv_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/your_name" />
     <TextView
+        android:textSize="20sp"
         android:id="@+id/tv_price"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" " />
     <TextView
+        android:textSize="20sp"
         android:id="@+id/tv_qty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" " />
     <TextView
+        android:textSize="20sp"
         android:id="@+id/tv_tax"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=" " />
     <TextView
+        android:textSize="20sp"
         android:id="@+id/tv_total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
