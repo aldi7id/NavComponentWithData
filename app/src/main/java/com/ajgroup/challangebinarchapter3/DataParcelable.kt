@@ -7,5 +7,6 @@ import kotlinx.parcelize.Parcelize
 data class DataParcelable(
     val price: Int,
     val qty: Int,
-    val tax: Int,
+    val tax: Double,
+    val total: Double
 ): Parcelable

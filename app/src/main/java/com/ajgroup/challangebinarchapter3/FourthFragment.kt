@@ -1,6 +1,5 @@
 package com.ajgroup.challangebinarchapter3
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -18,7 +17,7 @@ class FourthFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentFourthBinding.inflate(inflater, container, false)
         return binding.root
@@ -34,15 +33,14 @@ class FourthFragment : Fragment() {
             } else {
                 val price = binding.etPrice.text.toString().toInt()
                 val qty = binding.etQty.text.toString().toInt()
-                val tax = binding.etTax.text.toString().toInt()
-                binding.tvTotal.text = (price*qty*(1+tax/100)).toString()
+                val tax = binding.etTax.text.toString().toDouble()
+//                val dataParcelable = DataParcelable(price,qty,tax)
+                val total = (price*(1+tax/100)*qty)
+                val dataParcelable = DataParcelable(price,qty,tax,total)
+                //binding.tvTotal.text = (price*qty*(1+tax/100)).toString()
                 val actiontoThirdFragment =
-                    FourthFragmentDirections.actionFourthFragmentToThirdFragment(
-                        binding.tvName.text.toString(),
-                        binding.etPrice.text.toString(),
-                        binding.etQty.text.toString(),
-                        binding.etTax.text.toString(),
-                        binding.tvTotal.text.toString())
+
+                    FourthFragmentDirections.actionFourthFragmentToThirdFragment(aName.toString(),dataParcelable)
                 it.findNavController().navigate(actiontoThirdFragment)
             }
         }

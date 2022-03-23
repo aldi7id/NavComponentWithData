@@ -33,21 +33,10 @@
             app:destination="@id/fourthFragment" />
         <argument
             android:name="name"
-            app:argType="string"
-            app:nullable="true"
-            android:defaultValue=" " />
+            app:argType="string" />
         <argument
-            android:name="price"
-            android:defaultValue="Rp. " />
-        <argument
-            android:name="qty"
-            android:defaultValue=" " />
-        <argument
-            android:name="tax"
-            android:defaultValue=" " />
-        <argument
-            android:name="total"
-            android:defaultValue=" " />
+            android:name="dataParcelable"
+            app:argType="com.ajgroup.challangebinarchapter3.DataParcelable" />
     </fragment>
     <fragment
         android:id="@+id/fourthFragment"
