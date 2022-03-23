@@ -38,10 +38,10 @@ class ThirdFragment : Fragment() {
             it.findNavController().navigate(R.id.action_thirdFragment_to_fourthFragment, mBundle)
         }
         binding.tvName.text = "Selamat Datang $aName"
-        binding.tvPrice.text = "$price"
-        binding.tvQty.text = "$qty"
-        binding.tvTax.text = "$tax"
-        binding.tvTotal.text = "$total"
+        binding.tvPrice.text = "Harga Barang: Rp. $price"
+        binding.tvQty.text = "Jumlah Barang: $qty"
+        binding.tvTax.text = "Pajak: $tax %"
+        binding.tvTotal.text = "Rp. $total"
         }
 
     override fun onDestroy() {
