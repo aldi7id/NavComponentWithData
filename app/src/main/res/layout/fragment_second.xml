@@ -4,9 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="10dp"
     tools:context=".SecondFragment">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Screen 2"
+        android:gravity="center"
+        android:textSize="20sp"
+        />
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -26,5 +38,5 @@
         android:layout_height="wrap_content"
         android:text="@string/go_to_screen_three"/>
 
-
+</LinearLayout>
 </LinearLayout>

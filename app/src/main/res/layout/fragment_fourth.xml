@@ -7,6 +7,13 @@
     android:padding="10dp"
     tools:context=".FourthFragment">
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Screen 4"
+        android:gravity="center"
+        android:textSize="20sp"
+        />
+    <TextView
         android:id="@+id/tv_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
