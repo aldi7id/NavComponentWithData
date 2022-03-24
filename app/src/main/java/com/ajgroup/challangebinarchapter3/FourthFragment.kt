@@ -26,7 +26,7 @@ class FourthFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val aName = arguments?.getString(FirstFragment.EXTRA_NAME)
-        binding.tvName.text = "$aName"
+        binding.tvName.text = "Halo $aName Silahkan Masukkan Jumlah Belanjaan Anda"
         binding.btnThirdFragment.setOnClickListener {
             if (binding.etPrice.text.isNullOrEmpty() || binding.etQty.text.isNullOrEmpty() || binding.etTax.text.isNullOrEmpty()){
                 Toast.makeText(requireContext(), "Ada Kolom Yang Kosong", Toast.LENGTH_SHORT).show()
