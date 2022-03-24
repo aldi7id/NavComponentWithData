@@ -30,7 +30,9 @@ class FourthFragment : Fragment() {
         binding.btnThirdFragment.setOnClickListener {
             if (binding.etPrice.text.isNullOrEmpty() || binding.etQty.text.isNullOrEmpty() || binding.etTax.text.isNullOrEmpty()){
                 Toast.makeText(requireContext(), "Ada Kolom Yang Kosong", Toast.LENGTH_SHORT).show()
-            } else {
+            } else if(binding.etTax.text.toString().toDouble() > 100) {
+                Toast.makeText(requireContext(), "Pajak Ngga Boleh Lebih Dari 100%", Toast.LENGTH_SHORT).show()
+            }else {
                 val price = binding.etPrice.text.toString().toInt()
                 val qty = binding.etQty.text.toString().toInt()
                 val tax = binding.etTax.text.toString().toDouble()
